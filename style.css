@@ -18,7 +18,26 @@ li {
   padding: 15px 10px;
   border-radius: 15px;
   background-color: #eee;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+p {
+  margin: 0;
+  display: block;
+}
+i {
+  color: red;
+}
+.fa-pencil {
+  color: blue;
 }
 .complate {
   opacity: 0.5;
+}
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }

@@ -7,9 +7,17 @@ form.addEventListener("submit", (e) => {
 
   if (todoInput.value !== "") {
     let item = document.createElement("li");
-    item.textContent = todoInput.value;
+    item.innerHTML = `
+    <p>${todoInput.value}</p>
+    <div class='button-wrapper'>
+    <i class="fa-solid fa-pencil"></i>
+    <i class="fa-solid fa-trash"></i>
+    </div>
+    `;
     list.appendChild(item);
     todoInput.value = "";
+    const edit = document.querySelectorAll(".fa-pencil");
+    const del = document.querySelectorAll(".fa-trash");
   } else {
     todoInput.value = "Iltimos to do kirting!";
   }
