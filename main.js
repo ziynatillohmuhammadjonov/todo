@@ -18,6 +18,17 @@ form.addEventListener("submit", (e) => {
     todoInput.value = "";
     const edit = document.querySelectorAll(".fa-pencil");
     const del = document.querySelectorAll(".fa-trash");
+    del.forEach((i) => {
+      i.addEventListener("click", () => {
+        i.parentElement.parentElement.remove();
+      });
+    });
+    // edit.forEach((j) => {
+    //   j.addEventListener("click", () => {
+    //     todoInput.value = j.parentElement.parentElement.textContent;
+    //     j.parentElement.parentElement.textContent = todoInput.value;
+    //   });
+    // });
   } else {
     todoInput.value = "Iltimos to do kirting!";
   }
